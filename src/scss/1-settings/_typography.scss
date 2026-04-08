@@ -1,0 +1,19 @@
+// ─── Typography Tokens ───────────────────────────────────────────
+:root {
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+
+  --fs-xs:        0.625rem;   // 10px
+  --fs-sm:        0.75rem;    // 12px
+  --fs-base:      1rem;       // 16px
+  --fs-lg:        1.125rem;   // 18px
+
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+  --fw-black:     900;
+
+  --ls-wide:      0.12em;
+  --ls-wider:     0.18em;
+}

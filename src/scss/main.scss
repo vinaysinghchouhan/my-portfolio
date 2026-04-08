@@ -1,0 +1,26 @@
+// ════════════════════════════════════════════════════════════════
+//  MAIN — ITCSS Entry Point
+//  Layer order: Settings → Tools → Generic → Elements → Objects → Components
+// ════════════════════════════════════════════════════════════════
+
+// 1. Settings — design tokens (outputs :root custom props)
+@use '1-settings/colors';
+@use '1-settings/typography';
+@use '1-settings/spacing';
+
+// 2. Tools — mixins/functions (no CSS output)
+@use '2-tools/mixins';
+
+// 3. Generic — reset / normalize
+@use '3-generic/reset';
+
+// 4. Elements — bare HTML elements
+@use '4-elements/base';
+
+// 5. Objects — layout primitives
+@use '5-objects/layout';
+
+// 6. Components — UI components
+@use '6-components/hero';
+@use '6-components/sidebar';
+@use '6-components/info-bar';

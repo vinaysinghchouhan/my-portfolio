@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="50%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5500" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="900" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="480" y1="0" x2="480" y2="900"/>
+    <line x1="960" y1="0" x2="960" y2="900"/>
+    <line x1="1440" y1="0" x2="1440" y2="900"/>
+    <line x1="0" y1="225" x2="1920" y2="225"/>
+    <line x1="0" y1="450" x2="1920" y2="450"/>
+    <line x1="0" y1="675" x2="1920" y2="675"/>
+  </g>
+
+  <!-- Accent bar -->
+  <rect x="0" y="860" width="1920" height="4" fill="url(#accent)"/>
+
+  <!-- Center content -->
+  <text
+    x="960" y="415"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="'DM Sans', system-ui, sans-serif"
+    font-size="13"
+    font-weight="500"
+    letter-spacing="4"
+    fill="rgba(255,255,255,0.18)"
+    text-transform="uppercase"
+  >PLACEHOLDER IMAGE — REPLACE WITH YOUR PHOTO</text>
+
+  <!-- Decorative circle -->
+  <circle cx="960" cy="360" r="42" fill="none" stroke="rgba(255,85,0,0.25)" stroke-width="1"/>
+  <circle cx="960" cy="360" r="28" fill="none" stroke="rgba(255,85,0,0.15)" stroke-width="1"/>
+  <line x1="960" y1="318" x2="960" y2="402" stroke="rgba(255,85,0,0.2)" stroke-width="1"/>
+  <line x1="918" y1="360" x2="1002" y2="360" stroke="rgba(255,85,0,0.2)" stroke-width="1"/>
+</svg>

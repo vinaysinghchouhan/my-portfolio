@@ -1,0 +1,60 @@
+// ─── Sidebar Component ───────────────────────────────────────────
+// BEM: .sidebar
+
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--space-8);
+
+  &__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    height: 100%;
+  }
+
+  // Each item is a flex container that centers the rotated text.
+  // The item itself has no transform so GSAP can freely animate x/opacity.
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.25s ease;
+    color: var(--color-muted);
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+
+  // The span carries the rotation — kept separate from the animated parent
+  &__nav-text {
+    display: block;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    white-space: nowrap;
+    user-select: none;
+  }
+}

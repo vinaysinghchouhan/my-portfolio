@@ -1,0 +1,45 @@
+- const navItems = ['PROJECTS', 'ABOUT', 'SERVICES', 'PROCESS', 'TESTIMONIALS']
+- const pills = ['UX Research', 'Design Systems', 'UI/UX Design', 'Prototyping']
+
+section.hero
+  .hero__body
+    //- Left sidebar navigation
+    aside.sidebar
+      nav.sidebar__nav(aria-label="Section navigation")
+        ul.sidebar__nav-list
+          each item in navItems
+            li.sidebar__nav-item
+              a.sidebar__nav-link(href=`#${item.toLowerCase()}`)
+                span.sidebar__nav-text= item
+
+    //- Main content: headline
+    .hero__main
+      .hero__headline-wrap
+        h1.hero__headline Vinay Singh#[br] Chouhan
+
+  //- Info bar — full width, pinned to bottom of hero
+  .info-bar
+    .info-bar__pills
+      each pill in pills
+        span.pill= pill
+
+    .info-bar__sep
+
+    span.info-bar__role Design Lead &amp; Product Designer
+
+    .info-bar__sep
+
+    span.info-bar__availability
+      span.availability-dot
+      | &nbsp;Available for Opportunities
+
+    .info-bar__sep
+
+    span.info-bar__location Jaipur, India
+
+    a.info-bar__cta(href="#contact") LET'S TALK&nbsp;→
+
+//- Hero image — full width, scroll-reveal
+section.hero-image
+  .hero-image__wrapper
+    img.hero-image__img(src="/vinay-pic.jpg" alt="Vinay Singh Chouhan")

@@ -1,0 +1,12 @@
+// ─── Layout Objects ──────────────────────────────────────────────
+
+// Full-bleed wrapper used throughout
+.o-full {
+  width: 100%;
+}
+
+// Container with consistent horizontal padding
+.o-container {
+  width: 100%;
+  padding-inline: var(--space-8);
+}

@@ -1,0 +1,100 @@
+// ─── Info Bar Component ──────────────────────────────────────────
+// BEM: .info-bar
+
+.info-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-4) var(--space-8) var(--space-4) calc(var(--sidebar-w) + var(--space-8));
+  min-height: 56px;
+
+  &__pills {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding-right: var(--space-6);
+  }
+
+  &__sep {
+    width: 1px;
+    height: 1.1em;
+    background: var(--color-border);
+    flex-shrink: 0;
+    margin-right: var(--space-6);
+  }
+
+  &__role,
+  &__availability,
+  &__location {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-muted);
+    white-space: nowrap;
+    padding-right: var(--space-6);
+  }
+
+  &__availability {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__cta {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    padding: var(--space-3) var(--space-6);
+    border-radius: 100px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// ─── Pill ────────────────────────────────────────────────────────
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-muted);
+  background: var(--color-pill-bg);
+  border: 1px solid var(--color-pill-border);
+  border-radius: 100px;
+  padding: var(--space-1) var(--space-4);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+// ─── Availability dot ────────────────────────────────────────────
+.availability-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-available);
+  flex-shrink: 0;
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
