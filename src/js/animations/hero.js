@@ -5,8 +5,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 export function initHeroAnimation() {
   // ── Set initial states (page starts completely black / invisible) ──
+  gsap.set('body', { backgroundColor: '#0a0a0a' })
+
   gsap.set('.sidebar__nav-item', { x: -56, opacity: 0 })
+  gsap.set('.hero__intro-text', { y: -48, opacity: 0 })
   gsap.set('.hero__headline', { y: -72, opacity: 0 })
+  gsap.set('.hero__bio p', { x: -32, opacity: 0 })
   gsap.set(
     [
       '.pill',
@@ -17,6 +21,7 @@ export function initHeroAnimation() {
     ],
     { x: -32, opacity: 0 }
   )
+  gsap.set('.hero__bg-wrapper', { opacity: 0 })
 
   // ── Master timeline ────────────────────────────────────────────
   const tl = gsap.timeline({
@@ -33,20 +38,42 @@ export function initHeroAnimation() {
     ease: 'power2.out',
   })
 
-  // Step 2 — Headline fades in and drops from above
+  // Step 2 — "Hi, I am" text fades in and slides down from top
+  tl.to(
+    '.hero__intro-text',
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power3.out',
+    },
+    '-=0.3'
+  )
+
+  // Step 3 — Headline fades in and drops from above (after intro finishes)
   tl.to(
     '.hero__headline',
     {
       y: 0,
       opacity: 1,
-      duration: 1.05,
+      duration: 0.8,
       ease: 'power3.out',
-    },
-    '-=0.45'
+    }
   )
 
-  // Step 3 — Info bar items stagger left → right, one by one
-  //   selector string expands to: pill×4, role, availability, location, cta
+  // Step 4 — Bio text slides in from left to right with fade
+  tl.to(
+    '.hero__bio p',
+    {
+      x: 0,
+      opacity: 1,
+      duration: 0.65,
+      ease: 'power2.out',
+    },
+    '-=0.3'
+  )
+
+  // Step 5 — Info bar items stagger left → right, one by one
   tl.to(
     '.pill, .info-bar__role, .info-bar__availability, .info-bar__location, .info-bar__cta',
     {
@@ -56,37 +83,18 @@ export function initHeroAnimation() {
       stagger: 0.09,
       ease: 'power2.out',
     },
-    '-=0.5'
+    '-=0.2'
   )
 
-  // ── Scroll-triggered image reveal ─────────────────────────────
-  // Image starts completely clipped (top inset 100%) so nothing is visible.
-  // As user scrolls the clip shrinks, revealing the image from the bottom up.
-  gsap.set('.hero-image__wrapper', { clipPath: 'inset(100% 0% 0% 0%)' })
-
-  const imgTrigger = {
-    trigger: '.hero-image__wrapper',
-    start: 'top 88%',
-    end: 'top 20%',
-    scrub: 1.8,
-  }
-
-  // Clip-path reveal
-  gsap.to('.hero-image__wrapper', {
-    clipPath: 'inset(0% 0% 0% 0%)',
-    ease: 'none',
-    scrollTrigger: imgTrigger,
-  })
-
-  // Subtle scale-down as the image reveals (adds depth)
-  gsap.fromTo(
-    '.hero-image__img',
-    { scale: 1.18, y: 24 },
+  // Step 6 — Background image fades in from opacity 0 to 1
+  tl.to(
+    '.hero__bg-wrapper',
     {
-      scale: 1,
-      y: 0,
-      ease: 'none',
-      scrollTrigger: imgTrigger,
-    }
+      opacity: 1,
+      duration: 1,
+      ease: 'power2.inOut',
+    },
+    '-=0.4'
   )
 }
+

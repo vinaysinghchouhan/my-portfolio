@@ -2,6 +2,10 @@
 - const pills = ['UX Research', 'Design Systems', 'UI/UX Design', 'Prototyping']
 
 section.hero
+  //- Background image (fades in during animation)
+  .hero__bg-wrapper
+    img.hero__bg-img(src="/vinay-singh.png" alt="Vinay Singh Chouhan")
+
   .hero__body
     //- Left sidebar navigation
     aside.sidebar
@@ -12,10 +16,16 @@ section.hero
               a.sidebar__nav-link(href=`#${item.toLowerCase()}`)
                 span.sidebar__nav-text= item
 
-    //- Main content: headline
+    //- Main content: top-left area
     .hero__main
+      .hero__intro
+        span.hero__intro-text Hi, I am
+
       .hero__headline-wrap
         h1.hero__headline Vinay Singh#[br] Chouhan
+
+      .hero__bio
+        p I'm a UI/UX designer crafting intuitive, user-centric experiences at Memorres
 
   //- Info bar — full width, pinned to bottom of hero
   .info-bar
@@ -38,8 +48,3 @@ section.hero
     span.info-bar__location Jaipur, India
 
     a.info-bar__cta(href="#contact") LET'S TALK&nbsp;→
-
-//- Hero image — full width, scroll-reveal
-section.hero-image
-  .hero-image__wrapper
-    img.hero-image__img(src="/vinay-pic.jpg" alt="Vinay Singh Chouhan")
