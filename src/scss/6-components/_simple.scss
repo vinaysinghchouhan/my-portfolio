@@ -2,8 +2,6 @@
 // BEM: .intro
 
 .intro {
-  background: #0a0a0a;
-  padding: 120px 60px;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -93,8 +91,6 @@
 
 
 .intro {
-  padding: 120px 0;
-  background: #000;
 
   &__container {
     width: 100%;
@@ -153,5 +149,15 @@
   &__stat-label {
     font-size: 0.85rem;
     color: #777;
+  }
+}
+
+// Mobile responsive
+@media (max-width: 767px) {
+  .intro__supporting {
+    margin-top: 0px;
+  }
+  .intro__stats {
+    margin-top: 0px;
   }
 }

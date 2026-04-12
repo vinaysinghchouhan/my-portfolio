@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { initLenis } from './lenis-setup.js'
 import { initHeroAnimation } from './animations/hero.js'
 import { initSimpleAnimation } from './animations/simple.js'
+import { initJourneyAnimation } from './animations/journey.js'
 import { initMobileMenu } from './mobile-menu.js'
 
 // Register GSAP plugins
@@ -31,11 +32,21 @@ ScrollTrigger.scrollerProxy(document.body, {
 
 lenis.on('scroll', () => ScrollTrigger.update())
 
+// Connect GSAP ticker to Lenis for smooth animations
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
 // Run hero entrance animation after DOM is ready
 initHeroAnimation()
 
 // Initialize simple word reveal animation
 initSimpleAnimation()
+
+// Initialize journey timeline animation
+initJourneyAnimation()
 
 // Initialize mobile menu
 initMobileMenu()
