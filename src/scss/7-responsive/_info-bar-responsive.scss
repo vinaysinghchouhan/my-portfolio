@@ -1,0 +1,124 @@
+// ─── Responsive Info Bar ──────────────────────────────────────────
+@use '../7-responsive/breakpoints' as *;
+
+.info-bar {
+  // Tablet landscape — 1024px to 1279px
+  @include tablet-lg {
+    padding: var(--space-4) var(--space-6) var(--space-4) calc(var(--sidebar-w) + var(--space-6));
+  }
+
+  // Tablet portrait — 768px to 1023px
+  @include tablet {
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-4);
+    flex-wrap: wrap;
+    min-height: auto;
+    gap: var(--space-3);
+
+    &__pills {
+      flex: 1 1 auto;
+      padding-right: var(--space-4);
+      gap: var(--space-1);
+      order: 1;
+    }
+
+    &__sep {
+      display: none;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+
+    &__role,
+    &__availability {
+      display: none;
+    }
+
+    &__location {
+      flex: 1 1 100%;
+      padding-right: 0;
+      order: 2;
+      font-size: 0.75rem;
+    }
+
+    &__ctas {
+      flex: 1 1 100%;
+      margin-left: 0;
+      order: 3;
+      gap: var(--space-2);
+    }
+
+    &__cta {
+      flex: 1;
+      padding: var(--space-2) var(--space-4);
+      font-size: 0.7rem;
+      border-radius: 3px;
+
+      &--secondary {
+        border-width: 1px;
+      }
+    }
+  }
+
+  // Mobile large — 480px to 767px
+  @include mobile-sm {
+
+    &__pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      padding-right: 0;
+      order: 1;
+    }
+
+    &__sep {
+      display: none;
+    }
+
+    &__role,
+    &__availability,
+    &__location {
+      display: none;
+    }
+
+    &__ctas {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      gap: var(--space-2);
+      order: 2;
+    }
+
+    &__cta {
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      font-size: 0.7rem;
+      justify-content: center;
+      text-align: center;
+      border-radius: 3px;
+
+      &--secondary {
+        border-width: 1px;
+      }
+    }
+  }
+}
+
+.pill {
+  @include tablet {
+    font-size: 0.65rem;
+    padding: var(--space-1) var(--space-3);
+  }
+
+  @include mobile-lg {
+    font-size: 0.6rem;
+    padding: var(--space-1) var(--space-3);
+  }
+
+  @include mobile-sm {
+    font-size: 0.55rem;
+    padding: var(--space-1) var(--space-2);
+  }
+}

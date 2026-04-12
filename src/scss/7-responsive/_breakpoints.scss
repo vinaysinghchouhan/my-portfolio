@@ -1,0 +1,65 @@
+// ─── Responsive Breakpoints ───────────────────────────────────────
+// Mobile-first approach
+
+// Large desktop and above
+@mixin desktop-lg {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Tablet landscape
+@mixin tablet-lg {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+// Tablet portrait
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// Mobile large
+@mixin mobile-lg {
+  @media (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+// Mobile small
+@mixin mobile-sm {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+// Below desktop (mobile + tablet)
+@mixin below-desktop {
+  @media (max-width: 1279px) {
+    @content;
+  }
+}
+
+// Tablet and below
+@mixin tablet-and-below {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+// Mobile and below
+@mixin mobile-and-below {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

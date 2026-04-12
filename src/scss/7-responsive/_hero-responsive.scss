@@ -1,0 +1,145 @@
+// ─── Responsive Hero ──────────────────────────────────────────────
+@use '../7-responsive/breakpoints' as *;
+
+.hero {
+  // Desktop — 1280px and above: no changes
+  @include desktop {
+    // Everything stays as is
+  }
+
+  // Tablet landscape — 1024px to 1279px
+  @include tablet-lg {
+    &__main {
+      padding: 0 var(--space-10) var(--space-8);
+      gap: var(--space-5);
+    }
+
+    &__headline {
+      font-size: clamp(2.5rem, 5vw, 7rem);
+    }
+
+    &__positioning {
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+    }
+
+    &__bio p {
+      font-size: 0.95rem;
+    }
+  }
+
+  // Tablet portrait — 768px to 1023px
+  @include tablet {
+    &__body {
+      padding-top: var(--space-10);
+    }
+
+    &__main {
+      padding: 0 var(--space-8) var(--space-8);
+      gap: var(--space-5);
+    }
+
+    &__headline {
+      font-size: clamp(2rem, 4.5vw, 6rem);
+    }
+
+    &__positioning {
+      font-size: clamp(0.75rem, 1.3vw, 0.875rem);
+    }
+
+    &__intro-text {
+      font-size: 0.7rem;
+    }
+
+    &__bio p {
+      font-size: 0.9rem;
+    }
+
+    &__proof p {
+      font-size: 0.7rem;
+    }
+  }
+
+  // Mobile large — 480px to 767px
+  @include mobile-lg {
+    &__body {
+      padding-top: var(--space-8);
+    }
+
+    &__main {
+      padding: 0 var(--space-6) var(--space-8);
+      gap: var(--space-4);
+    }
+
+    &__headline {
+      font-size: clamp(1.75rem, 7vw, 3.5rem);
+      line-height: 0.95;
+    }
+
+    &__positioning {
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+    }
+
+    &__intro-text {
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+    }
+
+    &__bio {
+      max-width: 100%;
+
+      p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+    }
+
+    &__proof p {
+      font-size: 0.65rem;
+    }
+
+    &__overlay {
+      right: 30%; // Increase overlay area on mobile
+    }
+  }
+
+  // Mobile small — below 480px
+  @include mobile-sm {
+    &__body {
+      padding-top: var(--space-6);
+    }
+
+    &__main {
+      padding: 0 var(--space-4) var(--space-6);
+      gap: var(--space-3);
+    }
+
+    &__headline {
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+      line-height: 0.95;
+    }
+
+    &__positioning {
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+    }
+
+    &__intro-text {
+      font-size: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    &__bio {
+      max-width: 100%;
+
+      p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+    }
+
+    &__proof p {
+      font-size: 0.6rem;
+    }
+  }
+}
