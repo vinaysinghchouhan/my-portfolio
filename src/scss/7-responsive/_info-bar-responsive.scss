@@ -18,7 +18,6 @@
       flex: 1 1 auto;
       padding-right: var(--space-4);
       gap: var(--space-1);
-      order: 1;
     }
 
     &__sep {
@@ -36,9 +35,7 @@
     }
 
     &__location {
-      flex: 1 1 100%;
       padding-right: 0;
-      order: 2;
       font-size: 0.75rem;
     }
 

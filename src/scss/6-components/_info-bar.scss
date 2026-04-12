@@ -15,6 +15,11 @@
     padding: var(--space-4) var(--space-8) var(--space-4) var(--space-8);
   }
 
+  @media (min-width: 1024px) and (max-width: 1479px) {
+    padding: var(--space-4) var(--space-6) var(--space-4) var(--space-6);
+    gap: var(--space-2);
+  }
+
   @media (max-width: 767px) {
     flex-direction: column;
     align-items: stretch;
@@ -30,6 +35,12 @@
     gap: var(--space-2);
     padding-right: var(--space-6);
     flex-wrap: wrap;
+
+    @media (min-width: 1024px) and (max-width: 1479px) {
+      gap: var(--space-2);
+      padding-right: var(--space-4);
+      flex-shrink: 0;
+    }
 
     @media (max-width: 1023px) {
       gap: var(--space-1);
@@ -48,11 +59,7 @@
     height: 1.1em;
     background: var(--color-border);
     flex-shrink: 0;
-    margin-right: var(--space-6);
-
-    @media (max-width: 1023px) {
-      margin-right: var(--space-3);
-    }
+    margin-right: var(--space-3);
 
     @media (max-width: 767px) {
       display: none;
@@ -66,24 +73,39 @@
     font-weight: var(--fw-medium);
     color: var(--color-muted);
     white-space: nowrap;
-    padding-right: var(--space-6);
+    padding-right: var(--space-3);
+
+    @media (min-width: 1024px) and (max-width: 1479px) {
+      font-size: 0.8rem;
+    }
 
     @media (max-width: 1023px) {
       font-size: 0.75rem;
-      padding-right: var(--space-3);
       white-space: normal;
     }
 
-    @media (max-width: 767px) {
-      display: none;
+  }
+
+  &__left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+
+    @media (max-width: 600px) {
+      gap: var(--space-3);
     }
   }
 
   &__ctas {
-    margin-left: auto;
     display: flex;
     align-items: center;
     gap: var(--space-4);
+
+    @media (min-width: 1024px) and (max-width: 1479px) {
+      gap: var(--space-3);
+    }
 
     @media (max-width: 1023px) {
       gap: var(--space-3);
@@ -116,6 +138,11 @@
     transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
     border: 1px solid transparent;
+
+    @media (min-width: 1024px) and (max-width: 1479px) {
+      font-size: 0.8rem;
+      padding: var(--space-3) var(--space-5);
+    }
 
     @media (max-width: 1023px) {
       font-size: 0.75rem;

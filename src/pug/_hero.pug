@@ -42,23 +42,23 @@ section.hero
 
   //- Info bar — full width, pinned to bottom of hero
   .info-bar
-    span.info-bar__location Execution & Delivery &nbsp;&nbsp;|
+    .info-bar__left
+      span.info-bar__location Execution & Delivery
+      .info-bar__sep
 
-    .info-bar__pills
-      each pill in pills
-        span.pill= pill
+      .info-bar__pills
+        each pill in pills
+          span.pill= pill
 
-    .info-bar__sep
+      .info-bar__sep
 
+      span.info-bar__availability
+        span.availability-dot
+        | &nbsp;Available for Opportunities
 
-    span.info-bar__availability
-      span.availability-dot
-      | &nbsp;Available for Opportunities
+      .info-bar__sep
 
-    .info-bar__sep
-
-    span.info-bar__location Jaipur, India
+      span.info-bar__location Jaipur, India
 
     .info-bar__ctas
-      a.info-bar__cta.info-bar__cta--primary(href="#portfolio") View My Work
-      a.info-bar__cta.info-bar__cta--secondary(href="#contact") Let's Talk
+      a.info-bar__cta.info-bar__cta--primary(href="#portfolio") Let's Talk
