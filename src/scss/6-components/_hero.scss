@@ -19,6 +19,11 @@
     opacity: 0; // starts invisible, fades in during animation
     will-change: opacity;
     z-index: 0;
+
+    @media (max-width: 600px) {
+      top: -160px;
+      left: -110%;
+    }
   }
 
   &__bg-img {

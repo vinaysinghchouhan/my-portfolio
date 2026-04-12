@@ -130,11 +130,6 @@
       white-space: normal;
     }
 
-    @media (max-width: 479px) {
-      font-size: 0.8rem;
-      padding: var(--space-2) var(--space-3);
-    }
-
     &:hover {
       transform: translateY(-1px);
     }
