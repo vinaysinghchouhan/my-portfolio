@@ -1,18 +1,9 @@
 export function initMobileMenu() {
   const hamburger = document.querySelector('.hamburger')
   const mobileMenu = document.querySelector('.mobile-menu')
-  const closeBtn = document.querySelector('.mobile-menu__close')
   const menuLinks = document.querySelectorAll('.mobile-menu__link')
 
   if (!hamburger || !mobileMenu) return
-
-  // Open menu on hamburger click
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.add('active')
-    hamburger.setAttribute('aria-expanded', 'true')
-    mobileMenu.classList.add('active')
-    document.body.style.overflow = 'hidden'
-  })
 
   // Close menu function
   const closeMenu = () => {
@@ -22,10 +13,18 @@ export function initMobileMenu() {
     document.body.style.overflow = 'auto'
   }
 
-  // Close menu on close button click
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeMenu)
-  }
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('active')
+    if (isOpen) {
+      closeMenu()
+    } else {
+      hamburger.classList.add('active')
+      hamburger.setAttribute('aria-expanded', 'true')
+      mobileMenu.classList.add('active')
+      document.body.style.overflow = 'hidden'
+    }
+  })
 
   // Close menu on menu link click
   menuLinks.forEach(link => {
@@ -38,11 +37,5 @@ export function initMobileMenu() {
       closeMenu()
     }
   })
-
-  // Close menu on outside click
-  mobileMenu.addEventListener('click', (e) => {
-    if (e.target === mobileMenu) {
-      closeMenu()
-    }
-  })
 }
+

@@ -14,11 +14,6 @@ section.hero
 
   //- Mobile menu (full screen drawer)
   nav.mobile-menu(aria-label="Mobile section navigation")
-    button.mobile-menu__close(aria-label="Close navigation menu")
-      svg(width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
-        line(x1="18" y1="6" x2="6" y2="18")
-        line(x1="6" y1="6" x2="18" y2="18")
-
     ul.mobile-menu__list
       each item in navItems
         li.mobile-menu__item
