@@ -2,6 +2,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { initLenis } from './lenis-setup.js'
 import { initHeroAnimation } from './animations/hero.js'
+import { initSimpleAnimation } from './animations/simple.js'
 import { initMobileMenu } from './mobile-menu.js'
 
 // Register GSAP plugins
@@ -32,6 +33,9 @@ lenis.on('scroll', () => ScrollTrigger.update())
 
 // Run hero entrance animation after DOM is ready
 initHeroAnimation()
+
+// Initialize simple word reveal animation
+initSimpleAnimation()
 
 // Initialize mobile menu
 initMobileMenu()

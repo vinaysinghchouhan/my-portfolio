@@ -1,0 +1,31 @@
+// ─── Simple Section ────────────────────────────────────────────
+// BEM: .simple
+
+.simple {
+  padding: var(--space-16) var(--space-8);
+  background: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.simple__heading {
+  font-size: 3rem;
+  font-weight: var(--fw-black);
+  color: var(--color-bg);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+
+  span {
+    display: inline;
+    color: #cccccc;
+    will-change: color;
+    margin-right: 0.2em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

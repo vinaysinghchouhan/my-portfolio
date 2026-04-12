@@ -25,6 +25,7 @@
 @use '6-components/hero';
 @use '6-components/sidebar';
 @use '6-components/info-bar';
+@use '6-components/simple';
 
 // 7. Responsive — breakpoint-specific overrides
 @use '7-responsive/hero-responsive';
