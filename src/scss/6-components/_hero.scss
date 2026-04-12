@@ -214,7 +214,7 @@
   z-index: 100;
   width: 44px;
   height: 44px;
-  display: flex;
+  display: none; // hidden on screens 1024px and above
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -224,9 +224,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
-  display: none; // hidden on desktop
 
-  @media (max-width: 1279px) {
+  @media (max-width: 1023px) {
     display: flex;
   }
 
@@ -286,7 +285,7 @@
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 
