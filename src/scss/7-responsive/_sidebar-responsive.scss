@@ -1,0 +1,49 @@
+// ─── Responsive Sidebar ────────────────────────────────────────
+@use '../7-responsive/breakpoints' as *;
+
+.sidebar {
+  // Desktop — 1280px and above: no changes
+  @include desktop {
+    // Everything stays as is
+  }
+
+  // Tablet landscape — 1024px to 1279px
+  @include tablet-lg {
+    width: var(--sidebar-w);
+  }
+
+  // Tablet portrait — 768px to 1023px
+  @include tablet {
+    display: none;
+  }
+
+  // Mobile large — 480px to 767px
+  @include mobile-lg {
+    display: none;
+  }
+
+  // Mobile small — below 480px
+  @include mobile-sm {
+    display: none;
+  }
+}
+
+.sidebar__nav {
+  // Responsive nav styles if needed
+}
+
+.sidebar__nav-list {
+  // Responsive list styles if needed
+}
+
+.sidebar__nav-item {
+  // Responsive item styles if needed
+}
+
+.sidebar__nav-link {
+  // Responsive link styles if needed
+}
+
+.sidebar__nav-text {
+  // Responsive text styles if needed
+}

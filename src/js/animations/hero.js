@@ -10,7 +10,9 @@ export function initHeroAnimation() {
   gsap.set('.sidebar__nav-item', { x: -56, opacity: 0 })
   gsap.set('.hero__intro-text', { y: -48, opacity: 0 })
   gsap.set('.hero__headline', { y: -72, opacity: 0 })
+  gsap.set('.hero__positioning', { opacity: 0 })
   gsap.set('.hero__bio p', { x: -32, opacity: 0 })
+  gsap.set('.hero__proof p', { opacity: 0 })
   gsap.set(
     [
       '.pill',
@@ -61,6 +63,17 @@ export function initHeroAnimation() {
     }
   )
 
+  // Step 3.5 — Positioning line fades in after headline
+  tl.to(
+    '.hero__positioning',
+    {
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power3.out',
+    },
+    '-=0.2'
+  )
+
   // Step 4 — Bio text slides in from left to right with fade
   tl.to(
     '.hero__bio p',
@@ -71,6 +84,17 @@ export function initHeroAnimation() {
       ease: 'power2.out',
     },
     '-=0.3'
+  )
+
+  // Step 4.5 — Proof line fades in after bio
+  tl.to(
+    '.hero__proof p',
+    {
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power3.out',
+    },
+    '-=0.2'
   )
 
   // Step 5 — Info bar items stagger left → right, one by one

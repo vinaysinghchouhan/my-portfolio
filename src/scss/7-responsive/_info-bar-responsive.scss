@@ -61,64 +61,15 @@
     }
   }
 
-  // Mobile large — 480px to 767px
-  @include mobile-sm {
-
-    &__pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      padding-right: 0;
-      order: 1;
-    }
-
-    &__sep {
-      display: none;
-    }
-
-    &__role,
-    &__availability,
-    &__location {
-      display: none;
-    }
-
-    &__ctas {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-left: 0;
-      gap: var(--space-2);
-      order: 2;
-    }
-
-    &__cta {
-      width: 100%;
-      padding: var(--space-3) var(--space-4);
-      font-size: 0.7rem;
-      justify-content: center;
-      text-align: center;
-      border-radius: 3px;
-
-      &--secondary {
-        border-width: 1px;
-      }
-    }
-  }
 }
 
 .pill {
   @include tablet {
-    font-size: 0.65rem;
     padding: var(--space-1) var(--space-3);
   }
 
   @include mobile-lg {
-    font-size: 0.6rem;
     padding: var(--space-1) var(--space-3);
   }
 
-  @include mobile-sm {
-    font-size: 0.55rem;
-    padding: var(--space-1) var(--space-2);
-  }
 }

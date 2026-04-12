@@ -1,13 +1,31 @@
 - const navItems = ['PROJECTS', 'ABOUT', 'SERVICES', 'PROCESS', 'TESTIMONIALS']
-- const pills = ['UX Research', 'Design Systems', 'UI/UX Design', 'Prototyping']
+- const pills = ['HTML/CSS', 'PUG/SASS', 'Motion', 'Interaction', 'Framer', 'Webflow']
 
 section.hero
   //- Background image (fades in during animation)
   .hero__bg-wrapper
     img.hero__bg-img(src="/vinay-singh.png" alt="Vinay Singh Chouhan")
 
+  //- Hamburger menu button (mobile/tablet only)
+  button.hamburger(aria-label="Toggle navigation menu" aria-expanded="false")
+    span.hamburger__line.hamburger__line--top
+    span.hamburger__line.hamburger__line--middle
+    span.hamburger__line.hamburger__line--bottom
+
+  //- Mobile menu (full screen drawer)
+  nav.mobile-menu(aria-label="Mobile section navigation")
+    button.mobile-menu__close(aria-label="Close navigation menu")
+      svg(width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+        line(x1="18" y1="6" x2="6" y2="18")
+        line(x1="6" y1="6" x2="18" y2="18")
+
+    ul.mobile-menu__list
+      each item in navItems
+        li.mobile-menu__item
+          a.mobile-menu__link(href=`#${item.toLowerCase()}`)= item
+
   .hero__body
-    //- Left sidebar navigation
+    //- Left sidebar navigation (desktop only)
     aside.sidebar
       nav.sidebar__nav(aria-label="Section navigation")
         ul.sidebar__nav-list
@@ -24,20 +42,19 @@ section.hero
       .hero__headline-wrap
         h1.hero__headline Vinay Singh#[br] Chouhan
 
-      .hero__bio
-        p I'm a UI/UX designer crafting intuitive, user-centric experiences at Memorres
+      .hero__positioning-wrap
+        p.hero__positioning Design Lead • UX Strategist • Product Thinker
 
   //- Info bar — full width, pinned to bottom of hero
   .info-bar
+    span.info-bar__location Execution & Delivery &nbsp;&nbsp;|
+
     .info-bar__pills
       each pill in pills
         span.pill= pill
 
     .info-bar__sep
 
-    span.info-bar__role Design Lead &amp; Product Designer
-
-    .info-bar__sep
 
     span.info-bar__availability
       span.availability-dot
@@ -47,4 +64,6 @@ section.hero
 
     span.info-bar__location Jaipur, India
 
-    a.info-bar__cta(href="#contact") LET'S TALK&nbsp;→
+    .info-bar__ctas
+      a.info-bar__cta.info-bar__cta--primary(href="#portfolio") View My Work
+      a.info-bar__cta.info-bar__cta--secondary(href="#contact") Let's Talk

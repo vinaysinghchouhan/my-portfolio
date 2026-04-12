@@ -1,6 +1,6 @@
 // ════════════════════════════════════════════════════════════════
 //  MAIN — ITCSS Entry Point
-//  Layer order: Settings → Tools → Generic → Elements → Objects → Components
+//  Layer order: Settings → Tools → Generic → Elements → Objects → Components → Responsive
 // ════════════════════════════════════════════════════════════════
 
 // 1. Settings — design tokens (outputs :root custom props)
@@ -10,6 +10,7 @@
 
 // 2. Tools — mixins/functions (no CSS output)
 @use '2-tools/mixins';
+@use '7-responsive/breakpoints';
 
 // 3. Generic — reset / normalize
 @use '3-generic/reset';
@@ -24,3 +25,9 @@
 @use '6-components/hero';
 @use '6-components/sidebar';
 @use '6-components/info-bar';
+
+// 7. Responsive — breakpoint-specific overrides
+@use '7-responsive/hero-responsive';
+@use '7-responsive/sidebar-responsive';
+@use '7-responsive/info-bar-responsive';
+
