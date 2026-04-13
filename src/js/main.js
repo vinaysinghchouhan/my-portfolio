@@ -4,6 +4,7 @@ import { initLenis } from './lenis-setup.js'
 import { initHeroAnimation } from './animations/hero.js'
 import { initSimpleAnimation } from './animations/simple.js'
 import { initJourneyAnimation } from './animations/journey.js'
+import { initProcessAnimation } from './animations/process.js'
 import { initMobileMenu } from './mobile-menu.js'
 
 // Register GSAP plugins
@@ -47,6 +48,9 @@ initSimpleAnimation()
 
 // Initialize journey timeline animation
 initJourneyAnimation()
+
+// Initialize process section animation
+initProcessAnimation()
 
 // Initialize mobile menu
 initMobileMenu()
