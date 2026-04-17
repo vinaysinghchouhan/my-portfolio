@@ -1,6 +1,4 @@
-- const siteMapLinks = ['Home', 'Projects', 'About', 'Services', 'Process', 'Testimonials']
-- const projectLinks = ['Brand Identity', 'UX Consulting', 'Web Design', 'App Design']
-- const socialLinks = ['LinkedIn', 'Twitter', 'Instagram']
+- const navLinks = ['Work', 'Process', 'About', 'Contact']
 
 footer.footer
   //- Dome — position: fixed, scroll-driven via GSAP ScrollTrigger
@@ -10,15 +8,16 @@ footer.footer
     //- Top bar
     .footer__top
       a.footer__go-top(href="#" data-go-top) GO TO TOP
-      .footer__meta
-        span.footer__meta-line MADE BY VINAY SINGH CHOUHAN
-        span.footer__meta-line LAST UPDATED 4/17/26
-        span.footer__meta-line MADE IN VITE · PUG · GSAP
-        span.footer__meta-line © ALL RIGHTS RESERVED
 
-    //- Large heading
-    h2.footer__heading
-      | Let's Talk About#[br]Your Vision
+    //- Heading row: large heading left, CTA right
+    .footer__heading-row
+      h2.footer__heading
+        | Let's Talk About#[br]Your Vision
+      .footer__heading-aside
+        a.footer__download-btn(href="#" download)
+          | Download Resume
+          svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true")
+            path(d="M7 1v8M3 6l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
 
     //- Info grid — 4 columns
     .footer__grid
@@ -33,34 +32,26 @@ footer.footer
         .footer__group
           span.footer__label CURRENT RESIDENCE
           span.footer__value Jaipur, India
-        .footer__group
-          span.footer__label CURRENT TIME
-          span.footer__clock
 
       //- Col 2: Socials
       .footer__col
         .footer__group
           span.footer__label SOCIALS
-          each social in socialLinks
-            a.footer__social-link(href="#")= social
+          a.footer__social-link(href="#") LinkedIn
 
       //- Col 3: Empty spacer
       .footer__col.footer__col--empty
 
-      //- Col 4: Site map + Projects
+      //- Col 4: Navigation
       .footer__col.footer__col--nav
         .footer__group
-          span.footer__label SITE MAP
-          each item in siteMapLinks
+          span.footer__label NAVIGATION
+          each item in navLinks
             a.footer__nav-link(href="#")= item
-        .footer__group
-          span.footer__label PROJECTS
-          each project in projectLinks
-            a.footer__nav-link(href="#")= project
 
     //- Bottom bar
     .footer__bottom
       .footer__identity
         span.footer__name Vinay Singh Chouhan
         span.footer__role Design Lead & Product Designer
-      span.footer__freelance AVAILABLE FOR FREELANCE
+      span.footer__freelance Available for full-time opportunities
