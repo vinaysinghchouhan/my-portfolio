@@ -24,7 +24,7 @@ export function initSimpleAnimation() {
       words.forEach((word, index) => {
         const wordProgress = (progress * words.length) - index
         // Determine final color based on data-orange attribute
-        const finalColor = word.hasAttribute('data-orange') ? '#ff5500' : '#ffffff'
+        const finalColor = word.hasAttribute('data-orange') ? '#ff4337' : '#ffffff'
 
         if (wordProgress <= 0) {
           gsap.set(word, { color: '#222020' })
