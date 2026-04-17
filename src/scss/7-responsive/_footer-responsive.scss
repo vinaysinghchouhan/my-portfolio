@@ -1,0 +1,88 @@
+// ─── Responsive Footer ───────────────────────────────────────────
+@use '../7-responsive/breakpoints' as *;
+
+.footer {
+  @include tablet-lg {
+    &__inner {
+      padding: var(--space-10) var(--space-10) var(--space-6);
+      gap: var(--space-10);
+    }
+
+    &__heading {
+      font-size: clamp(3rem, 6vw, 7rem);
+      max-width: 65%;
+    }
+
+    &__grid {
+      grid-template-columns: 1.5fr 1fr 0.5fr 1.5fr;
+    }
+  }
+
+  @include tablet {
+    &__inner {
+      padding: var(--space-10) var(--space-8) var(--space-6);
+      gap: var(--space-8);
+    }
+
+    &__heading {
+      max-width: 80%;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+
+    &__col--empty {
+      display: none;
+    }
+
+    &__col--nav {
+      grid-column: span 2;
+      flex-direction: row;
+      gap: var(--space-12);
+    }
+  }
+
+  @include mobile-and-below {
+    &__inner {
+      padding: var(--space-8) var(--space-6) var(--space-6);
+      gap: var(--space-8);
+    }
+
+    &__heading {
+      font-size: clamp(2.5rem, 10vw, 5rem);
+      max-width: 100%;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    &__col--empty {
+      display: none;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-4);
+    }
+
+    &__freelance {
+      align-self: flex-start;
+    }
+  }
+
+  @include mobile-sm {
+    &__top {
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    &__meta {
+      align-items: flex-start;
+    }
+  }
+}

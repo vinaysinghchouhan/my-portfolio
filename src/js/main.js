@@ -5,6 +5,7 @@ import { initHeroAnimation } from './animations/hero.js'
 import { initSimpleAnimation } from './animations/simple.js'
 import { initJourneyAnimation } from './animations/journey.js'
 import { initProcessAnimation } from './animations/process.js'
+import { initFooterAnimation } from './animations/footer.js'
 import { initMobileMenu } from './mobile-menu.js'
 
 // Register GSAP plugins
@@ -12,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 // Initialise smooth scroll
 const lenis = initLenis()
+window.__lenis = lenis
 
 // Tell ScrollTrigger to use Lenis's scroll position
 ScrollTrigger.scrollerProxy(document.body, {
@@ -51,6 +53,9 @@ initJourneyAnimation()
 
 // Initialize process section animation
 initProcessAnimation()
+
+// Initialize footer dome animation and live clock
+initFooterAnimation()
 
 // Initialize mobile menu
 initMobileMenu()

@@ -28,9 +28,11 @@
 @use '6-components/simple';
 @use '6-components/journey';
 @use '6-components/process';
+@use '6-components/footer';
 
 // 7. Responsive — breakpoint-specific overrides
 @use '7-responsive/hero-responsive';
 @use '7-responsive/sidebar-responsive';
 @use '7-responsive/info-bar-responsive';
+@use '7-responsive/footer-responsive';
 
