@@ -4,6 +4,7 @@ import { initLenis } from './lenis-setup.js'
 import { initHeroAnimation } from './animations/hero.js'
 import { initSimpleAnimation } from './animations/simple.js'
 import { initJourneyAnimation } from './animations/journey.js'
+import { initWorkAnimation } from './animations/work.js'
 import { initProcessAnimation } from './animations/process.js'
 import { initFooterAnimation } from './animations/footer.js'
 import { initMobileMenu } from './mobile-menu.js'
@@ -50,6 +51,9 @@ initSimpleAnimation()
 
 // Initialize journey timeline animation
 initJourneyAnimation()
+
+// Initialize work section — sticky split + horizontal scroll
+initWorkAnimation()
 
 // Initialize process section animation
 initProcessAnimation()

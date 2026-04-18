@@ -1,0 +1,96 @@
+// ─── Responsive Work ─────────────────────────────────────────────
+@use '../7-responsive/breakpoints' as *;
+
+.work {
+  @include tablet-lg {
+    .work__header {
+      padding: var(--space-12) var(--space-10) var(--space-8);
+    }
+
+    .work__sticky-left {
+      width: 55%;
+    }
+
+    .work__sticky-right {
+      width: 45%;
+      padding: 10vh var(--space-8) 20vh;
+    }
+
+    .work__h-img {
+      width: 55%;
+    }
+
+    .work__h-info {
+      width: 45%;
+      padding: var(--space-12) var(--space-8);
+    }
+  }
+
+  @include tablet-and-below {
+    // Collapse sticky split to vertical on tablet and below
+    .work__sticky-wrap {
+      flex-direction: column;
+    }
+
+    .work__sticky-left {
+      width: 100%;
+      height: 50vh;
+      position: relative; // remove sticky on smaller screens
+    }
+
+    .work__sticky-right {
+      width: 100%;
+      padding: var(--space-10) var(--space-8) var(--space-10);
+      min-height: unset;
+      gap: var(--space-8);
+    }
+
+    .work__detail-text {
+      max-width: 100%;
+    }
+
+    // Horizontal panels become vertical stack on tablet/mobile
+    .work__h-outer {
+      overflow: visible;
+    }
+
+    .work__h-track {
+      flex-direction: column;
+      width: 100%;
+      transform: none !important; // override GSAP on small screens
+    }
+
+    .work__h-panel {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .work__h-img {
+      width: 100%;
+      height: 50vw;
+    }
+
+    .work__h-info {
+      width: 100%;
+      height: auto;
+      padding: var(--space-8);
+      border-left: none;
+      border-top: 1px solid var(--color-border);
+    }
+  }
+
+  @include mobile-and-below {
+    .work__header {
+      padding: var(--space-10) var(--space-6) var(--space-6);
+    }
+
+    .work__sticky-right {
+      padding: var(--space-8) var(--space-6) var(--space-8);
+    }
+
+    .work__h-info {
+      padding: var(--space-6);
+    }
+  }
+}

@@ -27,6 +27,7 @@
 @use '6-components/info-bar';
 @use '6-components/simple';
 @use '6-components/journey';
+@use '6-components/work';
 @use '6-components/process';
 @use '6-components/footer';
 
@@ -34,5 +35,6 @@
 @use '7-responsive/hero-responsive';
 @use '7-responsive/sidebar-responsive';
 @use '7-responsive/info-bar-responsive';
+@use '7-responsive/work-responsive';
 @use '7-responsive/footer-responsive';
 
