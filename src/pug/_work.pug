@@ -5,39 +5,6 @@ section.work
     span.work__label // Work
     h2.work__title Selected Work
 
-  //- Phase 1: Sticky split — Project 1 (Vaultly) detailed view
-  .work__sticky-wrap
-
-    .work__sticky-left
-      .work__sticky-img.work__sticky-img--vaultly
-        span.work__sticky-img-label Vaultly
-
-    .work__sticky-right
-      .work__project-meta
-        h3.work__project-name Vaultly
-        span.work__project-type Personal Wealth OS - Mobile App
-
-      .work__detail-section
-        span.work__detail-label Overview
-        p.work__detail-text A dark fintech app to plan, track and compound wealth.
-
-      .work__divider
-
-      .work__detail-section
-        span.work__detail-label Problem
-        p.work__detail-text Users struggled to understand their financial health at a glance.
-
-      .work__divider
-
-      .work__detail-section
-        span.work__detail-label Solution
-        p.work__detail-text Designed an intuitive dashboard with spending insights, budget allocation and goal tracking.
-
-      .work__project-tags
-        span.work__tag UI/UX Design
-        span.work__tag Mobile
-        span.work__tag Fintech
-
   //- Phase 2: Horizontal scroll — 3 project cards
   .work__h-outer
     .work__h-track
@@ -45,38 +12,40 @@ section.work
       //- Card 1: Vaultly
       .work__h-panel
         .work__h-img.work__h-img--vaultly
-          span.work__h-img-label Vaultly
+          img.work__h-img-photo(src="/vaultly.png" alt="Vaultly — Personal Wealth OS")
         .work__h-info
-          span.work__h-type Personal Wealth OS - Mobile App
+          span.work__h-type FINTECH PRODUCT • MOBILE EXPERIENCE
           h3.work__h-name Vaultly
-          p.work__h-overview A dark fintech app to plan, track and compound wealth.
+          p.work__h-overview A fintech app that simplifies how people plan, track, and grow their wealth. Helping users build better financial habits through clarity and automation.
           .work__h-tags
-            span.work__tag UI/UX Design
-            span.work__tag Mobile
+            span.work__tag Product Design
+            span.work__tag Mobile App
             span.work__tag Fintech
 
       //- Card 2: Brand Identity System
       .work__h-panel
-        .work__h-img.work__h-img--brand
-          span.work__h-img-label Brand Identity
+        .work__h-img.work__h-img--vaultly
+          img.work__h-img-photo(src="/MacBook13.jpg" alt="Brand Identity System")
         .work__h-info
-          span.work__h-type Branding and Visual Design
-          h3.work__h-name Brand Identity System
-          p.work__h-overview A complete brand identity for a digital product studio.
+          span.work__h-type SAAS PRODUCT • DASHBOARD EXPERIENCE
+          h3.work__h-name FlowDeck Marketing Dashboard
+          p.work__h-overview A scalable dashboard experience designed to simplify business insights and decision-making.
           .work__h-tags
-            span.work__tag Branding
+            span.work__tag Product Design
             span.work__tag Design Systems
-            span.work__tag Visual Design
+            span.work__tag SaaS
 
-      //- Card 3: Web Experience
+      //- Card 3: CTA
       .work__h-panel
-        .work__h-img.work__h-img--web
-          span.work__h-img-label Web Experience
+        .work__h-img.work__h-img--vaultly
+          img.work__h-img-photo(src="/MacBook13.jpg" alt="More Work")
         .work__h-info
-          span.work__h-type Web Design and Development
-          h3.work__h-name Web Experience
-          p.work__h-overview A high-performance marketing website with rich animations.
+          span.work__h-type Selected Work
+          h3.work__h-name Want to see more?
+          p.work__h-overview More case studies and detailed work available on request.
           .work__h-tags
-            span.work__tag Web Design
-            span.work__tag GSAP
-            span.work__tag Interaction Design
+            span.work__tag Product Design
+            span.work__tag SaaS
+            span.work__tag Dashboards
+          .work__h-cta
+            a.info-bar__cta.info-bar__cta--primary(href="#portfolio") Contact Me
