@@ -19,7 +19,7 @@ export function initHeroAnimation() {
       '.info-bar__role',
       '.info-bar__availability',
       '.info-bar__location',
-      '.info-bar__cta',
+      '.info-bar .info-bar__cta',
     ],
     { x: -32, opacity: 0 }
   )
@@ -99,7 +99,7 @@ export function initHeroAnimation() {
 
   // Step 5 — Info bar items stagger left → right, one by one
   tl.to(
-    '.pill, .info-bar__role, .info-bar__availability, .info-bar__location, .info-bar__cta',
+    '.pill, .info-bar__role, .info-bar__availability, .info-bar__location, .info-bar .info-bar__cta',
     {
       x: 0,
       opacity: 1,
