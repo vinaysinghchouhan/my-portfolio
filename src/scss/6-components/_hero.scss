@@ -79,6 +79,10 @@
     z-index: 3;
     padding-top: var(--space-12);
 
+    @media (min-width: 1024px) {
+      padding-left: var(--sidebar-w);
+    }
+
     @media (max-width: 1023px) {
       padding-top: var(--space-10);
     }

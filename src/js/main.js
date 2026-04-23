@@ -7,6 +7,7 @@ import { initJourneyAnimation } from './animations/journey.js'
 import { initWorkAnimation } from './animations/work.js'
 import { initProcessAnimation } from './animations/process.js'
 import { initFooterAnimation } from './animations/footer.js'
+import { initSidebarAnimation } from './animations/sidebar.js'
 import { initMobileMenu } from './mobile-menu.js'
 
 // Register GSAP plugins
@@ -60,6 +61,9 @@ initProcessAnimation()
 
 // Initialize footer dome animation and live clock
 initFooterAnimation()
+
+// Initialize sidebar — graceful hide before footer
+initSidebarAnimation()
 
 // Initialize mobile menu
 initMobileMenu()
