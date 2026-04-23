@@ -1,4 +1,4 @@
-- const navLinks = ['Work', 'Process', 'About', 'Contact']
+- const navLinks = [{label:'Home',href:'#home'},{label:'About',href:'#about'},{label:'Journey',href:'#journey'},{label:'Work',href:'#work'},{label:'Process',href:'#process'}]
 
 footer.footer
   //- Dome — position: fixed, scroll-driven via GSAP ScrollTrigger
@@ -47,7 +47,7 @@ footer.footer
         .footer__group
           span.footer__label NAVIGATION
           each item in navLinks
-            a.footer__nav-link(href="#")= item
+            a.footer__nav-link(href=item.href)= item.label
 
     //- Bottom bar
     .footer__bottom

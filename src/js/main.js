@@ -65,5 +65,16 @@ initFooterAnimation()
 // Initialize sidebar — graceful hide before footer
 initSidebarAnimation()
 
+// Route all in-page anchor clicks through Lenis for smooth scrolling
+document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('a[href^="#"]')
+  if (!anchor) return
+  const id = anchor.getAttribute('href')
+  const target = document.querySelector(id)
+  if (!target) return
+  e.preventDefault()
+  lenis.scrollTo(target, { offset: 0, duration: 1.2 })
+})
+
 // Initialize mobile menu
 initMobileMenu()
