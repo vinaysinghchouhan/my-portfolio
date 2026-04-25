@@ -1,6 +1,6 @@
 - const navLinks = [{label:'Home',href:'#home'},{label:'About',href:'#about'},{label:'Journey',href:'#journey'},{label:'Work',href:'#work'},{label:'Process',href:'#process'}]
 
-footer.footer
+footer#footer.footer
   //- Dome — position: fixed, scroll-driven via GSAP ScrollTrigger
   .footer__dome
 
@@ -15,9 +15,7 @@ footer.footer
         | Let's Talk About#[br]Your Vision
       .footer__heading-aside
         a.footer__download-btn(href="#" download)
-          | Download Resume
-          svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true")
-            path(d="M7 1v8M3 6l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+          | View Resume
 
     //- Info grid — 4 columns
     .footer__grid
@@ -25,7 +23,7 @@ footer.footer
       .footer__col
         .footer__group
           span.footer__label PHONE NUMBER
-          span.footer__value +91 98765 43210
+          a.footer__link(href="tel:8561058866") (+91) 8561058866
         .footer__group
           span.footer__label EMAIL
           a.footer__link(href="mailto:vinaysinghchouhan2@gmail.com") vinaysinghchouhan2@gmail.com
@@ -37,7 +35,7 @@ footer.footer
       .footer__col
         .footer__group
           span.footer__label SOCIALS
-          a.footer__social-link(href="#") LinkedIn
+          a.footer__social-link(href="https://www.linkedin.com/in/vinay-singh-chouhan") LinkedIn
 
       //- Col 3: Empty spacer
       .footer__col.footer__col--empty
@@ -52,6 +50,6 @@ footer.footer
     //- Bottom bar
     .footer__bottom
       .footer__identity
-        span.footer__name Vinay Singh Chouhan
+        //- span.footer__name Vinay Singh Chouhan
         span.footer__role Design Lead & Product Designer
       span.footer__freelance Available for full-time opportunities

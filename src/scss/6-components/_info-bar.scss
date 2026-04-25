@@ -7,7 +7,8 @@
   flex-wrap: wrap;
   gap: 0;
   border-top: 1px solid var(--color-border);
-  padding: var(--space-4) var(--space-6) var(--space-4) var(--space-6);
+  // padding: var(--space-4) var(--space-6) var(--space-4) var(--space-6);
+  padding: var(--space-4) var(--space-6) var(--space-4) calc(var(--sidebar-w) + var(--space-6));
   min-height: 56px;
   backdrop-filter: blur(10px);
 
@@ -16,7 +17,7 @@
   }
 
   @media (min-width: 1024px) and (max-width: 1479px) {
-    padding: var(--space-4) var(--space-6) var(--space-4) var(--space-6);
+    // padding: var(--space-4) var(--space-6) var(--space-4) var(--space-6);
     gap: var(--space-2);
   }
 
@@ -130,8 +131,8 @@
     gap: var(--space-2);
     font-size: var(--fs-sm);
     font-weight: var(--fw-semibold);
-    letter-spacing: var(--ls-wide);
-    text-transform: uppercase;
+    // letter-spacing: var(--ls-wide);
+    // text-transform: uppercase;
     padding: var(--space-3) var(--space-6);
     border-radius: 4px;
     white-space: nowrap;
